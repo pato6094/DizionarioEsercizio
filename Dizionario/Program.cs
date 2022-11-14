@@ -10,19 +10,19 @@ namespace Dizionario
             Cittadino c1 = new Cittadino("MREIO20939LSK");
             Dictionary<string, Dictionary<DIP, List<string>>> ANA = new Dictionary<string, Dictionary<DIP, List<string>>>();
 
-            ANA.Add(c1.ToString(), new());
-            ANA[c1.ToString()].Add(DIP.ASL, new());
-            ANA[c1.ToString()].Add(DIP.COMUNE, new());
-            ANA[c1.ToString()].Add(DIP.POLIZIA, new());
-            ANA[c1.ToString()].Add(DIP.INPS, new());
-            ANA[c1.ToString()].Add(DIP.SCUOLA, new());
+            ANA.Add(c1.CF, new());
+            ANA[c1.CF].Add(DIP.ASL, new());
+            ANA[c1.CF].Add(DIP.COMUNE, new());
+            ANA[c1.CF].Add(DIP.POLIZIA, new());
+            ANA[c1.CF].Add(DIP.INPS, new());
+            ANA[c1.CF].Add(DIP.SCUOLA, new());
 
-            ANA[c1.ToString()][DIP.ASL].Add("\nMedico di base assegnato: Mario Verdi");
-            ANA[c1.ToString()][DIP.COMUNE].Add("Residente in: via roma 123, Roma, Cap 00100");
-            ANA[c1.ToString()][DIP.POLIZIA].Add("Fedina Penale Pulita");
-            ANA[c1.ToString()][DIP.INPS].Add("Lavoratore,Dipendente,Operaio");
+            ANA[c1.CF][DIP.ASL].Add("\nMedico di base assegnato: Mario Verdi");
+            ANA[c1.CF][DIP.COMUNE].Add("Residente in: via roma 123, Roma, Cap 00100");
+            ANA[c1.CF][DIP.POLIZIA].Add("Fedina Penale Pulita");
+            ANA[c1.CF][DIP.INPS].Add("Lavoratore,Dipendente,Operaio");
             
-            ANA[c1.ToString()][DIP.SCUOLA].Add("Diploma Superiore");
+            ANA[c1.CF][DIP.SCUOLA].Add("Diploma Superiore");
             
             while (true)
             {
@@ -31,7 +31,7 @@ namespace Dizionario
 
                 if(int.Parse(x) == 1)
                 {
-                    foreach(var item in ANA[c1.ToString()][DIP.ASL])
+                    foreach(var item in ANA[c1.CF][DIP.ASL])
                     {
                         Console.WriteLine(item);
 
@@ -42,7 +42,7 @@ namespace Dizionario
                 }
                 else if (int.Parse(x) == 2)
                 {
-                    foreach (var item in ANA[c1.ToString()][DIP.COMUNE])
+                    foreach (var item in ANA[c1.CF][DIP.COMUNE])
                     {
                         Console.WriteLine(item);
 
@@ -51,7 +51,7 @@ namespace Dizionario
 
                 else if (int.Parse(x) == 3)
                 {
-                    foreach (var item in ANA[c1.ToString()][DIP.POLIZIA])
+                    foreach (var item in ANA[c1.CF][DIP.POLIZIA])
                     {
                         Console.WriteLine(item);
 
@@ -59,7 +59,7 @@ namespace Dizionario
                 }
                 else if (int.Parse(x) == 4)
                 {
-                    foreach (var item in ANA[c1.ToString()][DIP.INPS])
+                    foreach (var item in ANA[c1.CF][DIP.INPS])
                     {
                         Console.WriteLine(item);
 
@@ -67,7 +67,7 @@ namespace Dizionario
                 }
                 else if (int.Parse(x) == 5)
                 {
-                    foreach (var item in ANA[c1.ToString()][DIP.SCUOLA])
+                    foreach (var item in ANA[c1.CF][DIP.SCUOLA])
                     {
                         Console.WriteLine(item);
 
